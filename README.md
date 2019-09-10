@@ -8,4 +8,5 @@ Course introduction and word vectors.
 * co-occurrence matrices
 * word2vec 
 * SVD word embeddings <br>
+
 Code can plot embeddings, find synonyms of words, and solve analogies using a cosine similarity function.
