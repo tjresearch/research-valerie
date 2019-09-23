@@ -1,4 +1,4 @@
-#!"C:\Users\Valerie\Documents\School Documents\Git_SeniorResearch\SeniorResearch\Stanford Class\assignment2\venv\Scripts\python.exe"
+#!"C:\Users\Valerie\Documents\School Documents\Git_SeniorResearch\SeniorResearch\Stanford Class\a2\venv\Scripts\python.exe"
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==10.0.1','console_scripts','pip'
 __requires__ = 'pip==10.0.1'
 import re

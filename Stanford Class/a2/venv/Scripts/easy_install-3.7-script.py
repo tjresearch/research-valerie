@@ -1,4 +1,4 @@
-#!"C:\Users\Valerie\Documents\School Documents\Git_SeniorResearch\SeniorResearch\Stanford Class\assignment2\venv\Scripts\python.exe"
+#!"C:\Users\Valerie\Documents\School Documents\Git_SeniorResearch\SeniorResearch\Stanford Class\a2\venv\Scripts\python.exe"
 # EASY-INSTALL-ENTRY-SCRIPT: 'setuptools==39.1.0','console_scripts','easy_install-3.7'
 __requires__ = 'setuptools==39.1.0'
 import re

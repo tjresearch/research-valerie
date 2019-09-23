@@ -2,6 +2,7 @@
 
 import numpy as np
 import random
+import math
 
 from utils.gradcheck import gradcheck_naive
 from utils.utils import normalizeRows, softmax
@@ -17,6 +18,13 @@ def sigmoid(x):
     """
 
     ### YOUR CODE HERE
+
+    def scalar_sig(my_num):
+        return 1 / (1 + math.exp(-x))
+
+    # define vectorized sigmoid
+    sigmoid_v = np.vectorize(scalar_sig)
+    s = sigmoid_v(x)
 
     ### END YOUR CODE
 
