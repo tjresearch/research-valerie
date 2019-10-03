@@ -115,20 +115,44 @@ def minibatch_parse(sentences, model, batch_size):
     ###             to remove objects from the `unfinished_parses` list. This will free the underlying memory that
     ###             is being accessed by `partial_parses` and may cause your code to crash.
 
-    partial_parses = []
-    for s in sentences:
-        p_parse = PartialParse(s)
-        partial_parses.append(p_parse)
-    unfinished_parses = partial_parses[:]
+    partial_parses = [PartialParse(sentence) for sentence in sentences]
+    unfinished_parses = partial_parses[:]  # shallow copy of pp
+
     while len(unfinished_parses) > 0:
-        minibatch = unfinished_parses[:batch_size]
-        transitions = model.predict(minibatch)
+        parsers = unfinished_parses[:batch_size]
+        batch_transitions = model.predict(parsers)
+        for pp, transition in zip(parsers, batch_transitions):
+            pp.parse([transition])
+            if len(pp.buffer) == 0 and len(pp.stack) == 1:
+                unfinished_parses.remove(pp)
 
-
-
-    ### END YOUR CODE
-
+        ### END YOUR CODE
+    dependencies = [pp.dependencies for pp in partial_parses]
     return dependencies
+
+    # while len(unfinished_parses) > 0:
+    #     minibatch = unfinished_parses[:batch_size]
+    #     print('minibatch', minibatch)
+    #     transitions = model.predict(minibatch)
+    #     # print('transitions', transitions)
+    #     for p, t in zip(minibatch, transitions):    # p is a PartialParse and t is a transition
+    #         p.parse(t)
+    #         # print('transition', t)
+    #         # print('stack', p.stack)
+    #         # print('buffer', p.buffer)
+    #         # print('dependencies', p.dependencies)
+    #         # print()
+    #         if len(p.buffer) == 0 and len(p.stack) == 1:
+    #             unfinished_parses.remove(p)
+    #     # for index, p in enumerate(unfinished_parses):
+    #     #     if len(p.buffer) == 0 and len(p.stack) == 1:
+    #     #         popped = unfinished_parses.pop(index)
+    #     #         print('poppsed', popped)
+    #     # # unfinished_parses = unfinished_parses[batch_size:]
+    #
+    # ### END YOUR CODE
+    # dependencies = [pp.dependencies for pp in partial_parses]
+    # return dependencies
 
 
 def test_step(name, transition, stack, buf, deps,
