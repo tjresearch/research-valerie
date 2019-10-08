@@ -51,10 +51,10 @@ class ParserModel(nn.Module):
 
         ### YOUR CODE HERE (~5 Lines)
         ### TODO:
-        ###     1) Construct `self.embed_to_hidden` linear layer, initializing the weight matrix
+        ###     1) a) Construct `self.embed_to_hidden` linear layer, b) initializing the weight matrix
         ###         with the `nn.init.xavier_uniform_` function with `gain = 1` (default)
         ###     2) Construct `self.dropout` layer.
-        ###     3) Construct `self.hidden_to_logits` linear layer, initializing the weight matrix
+        ###     3) a) Construct `self.hidden_to_logits` linear layer, b) initializing the weight matrix
         ###         with the `nn.init.xavier_uniform_` function with `gain = 1` (default)
         ###
         ### Note: Here, we use Xavier Uniform Initialization for our Weight initialization.
@@ -72,6 +72,11 @@ class ParserModel(nn.Module):
         ###     Xavier Init: https://pytorch.org/docs/stable/nn.html#torch.nn.init.xavier_uniform_
         ###     Dropout: https://pytorch.org/docs/stable/nn.html#torch.nn.Dropout
 
+        self.embed_to_hidden = nn.Linear(self.embed_size * self.n_features, self.hidden_size)
+        nn.init.xavier_uniform_(self.embed_to_hidden.weight, gain=1)
+        self.dropout = nn.Dropout(p=self.dropout_prob)
+        self.hidden_to_logits = nn.Linear(self.hidden_size, self.n_classes)
+        nn.init.xavier_uniform_(self.hidden_to_logits.weight, gain=1)
 
         ### END YOUR CODE
 
@@ -104,6 +109,9 @@ class ParserModel(nn.Module):
         ###     Embedding Layer: https://pytorch.org/docs/stable/nn.html#torch.nn.Embedding
         ###     View: https://pytorch.org/docs/stable/tensors.html#torch.Tensor.view
 
+        x = self.pretrained_embeddings(t)
+        x = x.view(x.size()[0], -1)  # shape (batch_size, n_features * embedding_size)
+        # why is -1 an argument above?
 
         ### END YOUR CODE
         return x
