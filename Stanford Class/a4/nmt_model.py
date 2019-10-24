@@ -67,12 +67,21 @@ class NMT(nn.Module):
         ###     LSTM:
         ###         https://pytorch.org/docs/stable/nn.html#torch.nn.LSTM
         ###     LSTM Cell:
-        ###         https://pytorch.org/docs/stable/nn.html#torch.nn.LSTMCell
+        ###         https://pytorself.ch.org/docs/stable/nn.html#torch.nn.LSTMCell
         ###     Linear Layer:
         ###         https://pytorch.org/docs/stable/nn.html#torch.nn.Linear
         ###     Dropout Layer:
         ###         https://pytorch.org/docs/stable/nn.html#torch.nn.Dropout
 
+        self.encoder = nn.LSTM(embed_size, hidden_size, bias=True, bidirectional=True)
+        self.decoder = nn.LSTMCell(embed_size+hidden_size, hidden_size, bias=True)  # why add embed+hidden for input size?
+        self.h_projection = nn.Linear(hidden_size*2, hidden_size, bias=False) # prj output of last h_state of encode (R^2h) to R^h
+        self.c_projection = nn.Linear(hidden_size*2, hidden_size, bias=False)
+        self.att_projection = nn.Linear(hidden_size*2, hidden_size, bias=False)
+        self.combined_output_projection = nn.Linear(hidden_size * 3, hidden_size,
+                                                    bias=False)  # use after combined attention output and h_decode
+        self.target_vocab_projection = nn.Linear(hidden_size, len(vocab.tgt), bias=False)  # for softmax of last
+        self.dropout = nn.Dropout(self.dropout_rate)
 
         ### END YOUR CODE
 
