@@ -2,6 +2,10 @@
 
 My repo for 2019-2020 TJ Computer Systems Research! All senior research files will go here.
 
+## Project Overview
+
+## Folders
+
 ### Journals
 The journals that I turned in every week in class go into this folder. They include my progress, what I learned that week, and my future goals.
 
