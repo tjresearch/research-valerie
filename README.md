@@ -3,6 +3,8 @@
 My repo for 2019-2020 TJ Computer Systems Research! All senior research files will go here.
 
 ## Project Overview
+1. Title: Natural Language Processing to Answer Questions Based on Informative Text <br>
+2. Overview/Proposal: In my project, I will create a recurrent neural network model (RNN) that can answer questions based on an informational passage. I will train my model with the Stanford Question Answering Dataset (SQuAD), which contains Wikipedia passages as well as questions/answer pairs associated with the passages. I also plan on building off of BERT, a bidirectionally trained set of word vectors created by Google. BERT has been pretrained for text classification tasks.
 
 ## Folders
 
