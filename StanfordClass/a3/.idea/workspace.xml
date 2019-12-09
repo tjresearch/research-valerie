@@ -52,23 +52,32 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1351757089">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parser_transitions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2363">
-              <caret line="139" column="38" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="38" />
+            <state relative-caret-position="238">
+              <caret line="65" column="55" lean-forward="true" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parser_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="142" column="12" lean-forward="true" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
+            <state relative-caret-position="2414">
+              <caret line="142" column="12" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
               <folding>
                 <element signature="e#187#200#0" expanded="true" />
               </folding>
@@ -128,7 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -140,10 +148,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="terminal" />
@@ -230,7 +240,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2437247" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24777327" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -264,13 +274,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="a3 with pytorch" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/parser_transitions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
-          <caret line="139" column="38" selection-start-line="139" selection-start-column="38" selection-end-line="139" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1785">
@@ -287,11 +290,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parser_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="142" column="12" lean-forward="true" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
+        <state relative-caret-position="2414">
+          <caret line="142" column="12" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
           <folding>
             <element signature="e#187#200#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser_transitions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="65" column="55" lean-forward="true" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
         </state>
       </provider>
     </entry>
