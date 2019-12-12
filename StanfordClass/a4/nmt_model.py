@@ -73,7 +73,7 @@ class NMT(nn.Module):
         ###     Dropout Layer:
         ###         https://pytorch.org/docs/stable/nn.html#torch.nn.Dropout
 
-        self.encoder = nn.LSTM(embed_size, hidden_size, bias=True, bidirectional=True)
+        self.encoder = nn.LSTM(embed_size, hidden_size, bias=True, dropout=self.dropout_rate, bidirectional=True)
         self.decoder = nn.LSTMCell(embed_size+hidden_size, hidden_size, bias=True)  # why add embed+hidden for input size?
         self.h_projection = nn.Linear(hidden_size*2, hidden_size, bias=False) # prj output of last h_state of encode (R^2h) to R^h
         self.c_projection = nn.Linear(hidden_size*2, hidden_size, bias=False)
