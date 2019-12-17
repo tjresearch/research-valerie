@@ -8,15 +8,14 @@ My repo for 2019-2020 TJ Computer Systems Research! All senior research files wi
 3. Requirements: As of right now, the code for my actual project is in Jupyter Notebook. If you run the notebooks through Google's Colab, you should be able to run the installation and imports directly in Colab. <br>
 The files from the folder "Stanford Class" have separate installation needs, and these files are python files that I ran in PyCharm (which created all the extra folders/files). However, these files were all for my own learning purposes and not part of my actual project. <br><br>
 
-My most recently implemented question answering model is in the Jupyter Notebook file BERT_QuestionAnswering.ipynb. When I run it, I use Google Colab and set the runtime type to TPU. It appears to be working, but I'm still trying to figure out how to run the code that will measure the accuracy.
-
 ## Folders
 
 ### Journals
 The journals that I turned in every week in class go into this folder. They include my progress, what I learned that week, and my future goals.
 
 ### Project
-All the files that are associated with my actual question answering project (as opposed to files I created for my online class) will end up in this folder.
+All the files that are associated with my actual question answering project (as opposed to files I created for my online class) will end up in this folder. <br>
+Inside the project folder, you will see that there's a folder called apex that doesn't open here. This is another GitHub repo that I had to clone for use in my project, and it can be found here: https://github.com/NVIDIA/apex.git
 
 ### Stanford Class
 These are all the documents from an online class I followed through Stanford that teaches natural langugae processing with deep learning. The course is called CS224n, and their web page contains all the course notes. All the lecture videos (about 1.5 hrs each) are on YouTube. This is where I learned all the foundational material for my project, such as word embeddings, text generation/prediction, and types of recurrent neural networks.
