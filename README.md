@@ -5,7 +5,7 @@ My repo for 2019-2020 TJ Computer Systems Research! All senior research files wi
 ## Project Overview
 1. Title: Natural Language Processing to Answer Questions Based on Informative Text <br>
 2. Overview/Proposal: In my project, I will create a recurrent neural network model (RNN) that can answer questions based on an informational passage. I will train my model with the Stanford Question Answering Dataset (SQuAD), which contains Wikipedia passages as well as questions/answer pairs associated with the passages. I also plan on building off of BERT, a bidirectionally trained set of word vectors created by Google. BERT has been pretrained for text classification tasks. <br>
-3. Requirements: As of right now, the code for my actual project is in Jupyter Notebook. If you run the notebooks through Google's Colab, you should be able to run the installation and imports directly in Colab. <br>
+3. Requirements: As of right now, the code for my actual project is in Jupyter Notebooks. I've been running them on the cluster at TJ. To run the code, you need to clone NVIDIA's apex repo (please see Project heading below). You will also need to install fast-bert, created by huggingface on GitHub. Here's the repo: https://github.com/huggingface/transformers.git. These installations can be found in the Jupyter notebook fastBERT_test.ipynb.<br>
 The files from the folder "Stanford Class" have separate installation needs, and these files are python files that I ran in PyCharm (which created all the extra folders/files). However, these files were all for my own learning purposes and not part of my actual project. <br><br>
 
 ## Folders
