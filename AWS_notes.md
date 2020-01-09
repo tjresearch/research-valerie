@@ -1,5 +1,6 @@
 # AWS Notes
 
+### Connecting to the Machine
 1. Go to AWS EC2 dashboard (aka the AWS console).
 2. Select the EC2 instance, click **Actions**, Instance State, Start. <br>
 When the machine starts, it gets assigned an IP address.
