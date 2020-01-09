@@ -18,4 +18,4 @@ Once you've connected the first time from a terminal, you can open a second term
 + Once you're in the terminal for the AWS machine, type `jupyter notebook` 
 + Copy the link that it says to copy
 + Paste it into browser
-+ Now you can run Jupyter Notebooks on the remote machine :)
++ Now you can run Jupyter Notebooks on the remote machine
