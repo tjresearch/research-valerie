@@ -1,6 +1,6 @@
 # SeniorResearch
 
-My repo for 2019-2020 TJ Computer Systems Research! All senior research files will go here.
+My repo for 2019-2020 TJ Computer Systems Research. All senior research files will go here.
 
 ## Project Overview
 1. Title: Natural Language Processing to Answer Questions Based on Informative Text <br>
